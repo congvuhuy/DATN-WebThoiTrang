@@ -106,3 +106,6 @@ D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.CoreCompil
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.CopyComplete
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.dll
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.pdb
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db01.resources
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.GenerateResource.cache
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db02.resources
