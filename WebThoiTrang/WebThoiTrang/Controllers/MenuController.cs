@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebThoiTrang.Models;
 
-namespace WebBanHangOnline.Controllers
+namespace WebThoiTrang.Controllers
 {
     public class MenuController : Controller
     {
@@ -37,10 +37,10 @@ namespace WebBanHangOnline.Controllers
             return PartialView("_MenuLeft", items);
         }
 
-        public ActionResult MenuArrivals()
+        public ActionResult MenuOverView()
         {
-            var items = db.ProductCategories.ToList();
-            return PartialView("_MenuArrivals", items);
+            var items = db.Products.ToList();
+            return PartialView("_MenuOverView", items);
         }
 
     }

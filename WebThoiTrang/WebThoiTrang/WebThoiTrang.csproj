@@ -3440,6 +3440,9 @@
     <Content Include="Views\Menu\_MenuProductCategory.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Menu\_MenuOverView.cshtml" />
+    <Content Include="Views\News\Partial_News_Home.cshtml" />
+    <Content Include="Views\News\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
