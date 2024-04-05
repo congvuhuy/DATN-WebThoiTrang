@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<WebThoiTrang.Models.EF.Product>
 
 @{
-    ViewBag.Title = "trang chu san pham";
+    ViewBag.Title = "trang chu san pham theo danh muc";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -16,11 +16,14 @@
                 Sản phẩm
                 <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
             </a>
-
-            <a href="/san-pham" class="stext-109 cl8 hov-cl1 trans-04">
-                Tất cả
-                
-            </a>
+            <span class="stext-109 cl4">
+                @foreach (var item in Model)
+                {
+                    <a href="/san-pham" class="stext-109 cl8 hov-cl1 trans-04">
+                        @item.ProductCategory.Title
+                    </a>
+                }
+            </span>
         </div>
         <div class="flex-w flex-sb-m p-b-52">
             @Html.Action("MenuTopProductCategory", "Menu")
@@ -255,9 +258,9 @@
                             <div class="block2-pic hov-img0">
                                 <img src="@strImge" alt="@item.Title">
 
-                                @*<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                                     Quick View
-                                </a>*@
+                                </a>
                             </div>
 
                             <div class="block2-txt flex-w flex-t p-t-14">
@@ -272,16 +275,14 @@
                                 </div>
 
                                 @*<div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
-                                </a>
-                            </div>*@
+                                        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                            <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+                                            <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+                                        </a>
+                                    </div>*@
                             </div>
                         </div>
                     </div>
-                    <!-- Modal1-->
-                  
                 }
             }
         </div>
@@ -292,6 +293,5 @@
                 Load More
             </a>
         </div>
-        
     </div>
 </div>

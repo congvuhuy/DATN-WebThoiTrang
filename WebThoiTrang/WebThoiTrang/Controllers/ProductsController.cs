@@ -31,6 +31,7 @@ namespace WebThoiTrang.Controllers
 
             return View(item);
         }
+        
         public ActionResult ProductCategory(string alias, int id)
         {
             var items = db.Products.ToList();
@@ -48,16 +49,27 @@ namespace WebThoiTrang.Controllers
             return View(items);
         }
 
-        public ActionResult Partial_ItemsByCateId()
+        public ActionResult Partial_ItemsByCateId(string alias, int id)
         {
-            var items = db.Products.Where(x => x.IsHome && x.IsActive).Take(12).ToList();
-            return PartialView(items);
+            var items = db.Products.ToList();
+            if (id > 0)
+            {
+                items = items.Where(x => x.ProductCategoryId == id).ToList();
+            }
+            var cate = db.ProductCategories.Find(id);
+            if (cate != null)
+            {
+                ViewBag.CateName = cate.Title;
+            }
+
+            ViewBag.CateId = id;
+            return View(items);
         }
 
-        public ActionResult Partial_ProductSales()
-        {
-            var items = db.Products.Where(x => x.IsSale && x.IsActive).Take(12).ToList();
-            return PartialView(items);
-        }
+        //public ActionResult Partial_ProductSales()
+        //{
+        //    var items = db.Products.Where(x => x.IsSale && x.IsActive).Take(12).ToList();
+        //    return PartialView(items);
+        //}
     }
 }

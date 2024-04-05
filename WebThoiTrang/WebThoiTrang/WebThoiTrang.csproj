@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -3291,6 +3292,7 @@
     <Content Include="Areas\Admin\Views\Products\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Add.cshtml" />
     <Content Include="Areas\Admin\Views\ProductImage\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
     <Content Include="Content\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
@@ -3390,7 +3392,6 @@
     <Content Include="Content\assets\vendor\slick\slick-theme.scss" />
     <Content Include="Content\assets\vendor\slick\slick.less" />
     <Content Include="Content\assets\vendor\slick\slick.scss" />
-    <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3442,7 +3443,10 @@
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Menu\_MenuOverView.cshtml" />
     <Content Include="Views\News\Partial_News_Home.cshtml" />
-    <Content Include="Views\News\Detail.cshtml" />
+    <Content Include="Views\Menu\_MenuTopProductCategory.cshtml" />
+    <Content Include="Views\Products\ProductCategory.cshtml" />
+    <Content Include="Views\Products\Detail.cshtml" />
+    <Content Include="Views\Products\Partial_ItemsByCateId.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

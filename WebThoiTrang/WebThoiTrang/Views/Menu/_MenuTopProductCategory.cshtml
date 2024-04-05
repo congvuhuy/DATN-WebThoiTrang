@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WebThoiTrang.Models.EF.ProductCategory>
+<div class="flex-w flex-l-m filter-tope-group m-tb-10">
+    @if (Model != null && Model.Any())
+    {
+        <a href="/san-pham">
+            <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 " data-filter="*">
+                All Products
+            </button>
+        </a>
+
+        foreach (var item in Model)
+        {
+            <a href="/danh-muc-san-pham/@item.Alias-@(item.Id)">
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 " data-filter="*">
+                    @item.Title
+                </button>
+            </a>
+        }
+    }
+</div>

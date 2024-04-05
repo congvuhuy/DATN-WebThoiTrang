@@ -101,7 +101,6 @@ D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.Owin.Security.Twitter.xml
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.Owin.Security.OAuth.xml
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.AssemblyReference.cache
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.CoreCompileInputs.cache
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.CopyComplete
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.dll
@@ -114,3 +113,4 @@ D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\CKFinder.dll
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\CKFinder.pdb
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db01.resources
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.GenerateResource.cache
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.AssemblyReference.cache

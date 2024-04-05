@@ -32,11 +32,11 @@ namespace WebThoiTrang
                 namespaces: new[] { "WebThoiTrang.Controllers" }
             );
             routes.MapRoute(
-                name: "CategoryProduct",
-                url: "danh-muc-san-pham/{alias}-{id}",
-                defaults: new { controller = "Products", action = "ProductCategory", id = UrlParameter.Optional },
-                namespaces: new[] { "WebThoiTrang.Controllers" }
-            );
+               name: "ProductOfCategory",
+               url: "danh-muc-san-pham/{alias}-{id}",
+               defaults: new { controller = "Products", action = "ProductCategory", id = UrlParameter.Optional },
+               namespaces: new[] { "WebThoiTrang.Controllers" }
+           );
             routes.MapRoute(
                 name: "BaiViet",
                 url: "post/{alias}",

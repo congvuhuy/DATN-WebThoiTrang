@@ -27,14 +27,14 @@ namespace WebThoiTrang.Controllers
             var items = db.ProductCategories.ToList();
             return PartialView("_MenuProductCategory", items);
         }
-        public ActionResult MenuLeft(int? id)
+        public ActionResult MenuTopProductCategory(int? id)
         {
             if (id != null)
             {
                 ViewBag.CateId = id;
             }
             var items = db.ProductCategories.ToList();
-            return PartialView("_MenuLeft", items);
+            return PartialView("_MenuTopProductCategory", items);
         }
 
         public ActionResult MenuOverView()
