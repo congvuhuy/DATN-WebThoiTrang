@@ -42,6 +42,11 @@ namespace WebThoiTrang.Controllers
             var items = db.Products.ToList();
             return PartialView("_MenuOverView", items);
         }
+        public ActionResult MenuRightNews()
+        {
+            var items = db.ProductCategories.ToList();
+            return PartialView("_MenuRightNews",items);
+        }
 
     }
 }

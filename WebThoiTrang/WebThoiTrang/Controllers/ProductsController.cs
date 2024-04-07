@@ -49,23 +49,17 @@ namespace WebThoiTrang.Controllers
             return View(items);
         }
 
-        public ActionResult Partial_ItemsByCateId(string alias, int id)
+        public ActionResult Partial_ItemsByCateId(int id)
         {
-            var items = db.Products.ToList();
-            if (id > 0)
-            {
-                items = items.Where(x => x.ProductCategoryId == id).ToList();
-            }
-            var cate = db.ProductCategories.Find(id);
-            if (cate != null)
-            {
-                ViewBag.CateName = cate.Title;
-            }
-
-            ViewBag.CateId = id;
+            var cateid = db.Products.Find(id).ProductCategoryId;
+            var items = db.Products.Where(x => x.ProductCategoryId == cateid).ToList();
             return View(items);
         }
-
+        public ActionResult Partial_ProductFeature()
+        {
+            var items = db.Products.Where(x => x.IsFeature && x.IsActive).Take(5).ToList();
+            return PartialView(items);
+        }
         //public ActionResult Partial_ProductSales()
         //{
         //    var items = db.Products.Where(x => x.IsSale && x.IsActive).Take(12).ToList();

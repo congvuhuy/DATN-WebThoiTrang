@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<WebThoiTrang.Models.EF.Product>
-@if (Model != null && Model.Any())
+@if (Model != null)
 {
     <section class="sec-relate-product bg0 p-t-45 p-b-105">
         <div class="container">
@@ -12,10 +12,16 @@
                 <div class="slick2">
                         @foreach(var item in Model)
                         {
+                            var strImge = "";
+                            var img = item.ProductImage.FirstOrDefault(x => x.IsDefault);
+                            if (img != null)
+                            {
+                                strImge = img.Image;
+                            }
                     <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
                         <div class="block2">
                             <div class="block2-pic hov-img0">
-                                <img src="@item.Image" alt="IMG-PRODUCT">
+                                <img src="@strImge" alt="IMG-PRODUCT">
                             </div>
 
                             <div class="block2-txt flex-w flex-t p-t-14">
