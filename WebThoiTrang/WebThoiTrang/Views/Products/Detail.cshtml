@@ -4,9 +4,17 @@
     ViewBag.SeoDescription = Model.SeoDescription ?? Model.Title;
     ViewBag.SeoKeyWord = Model.SeoKeywords ?? Model.Title;
 }
+<style>
+    .btn-up,
+    .btn-down {
+        width: 45px;
+        height: 100%;
+        cursor: pointer;
+    }
+</style>
 @if (Model != null)
 {
-    <section class="sec-product-detail bg0 p-t-65 p-b-60">
+    <div class="sec-product-detail bg0 p-t-65 p-b-60">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-7 p-b-30">
@@ -55,13 +63,13 @@
                             <div class="flex-w flex-r-m p-b-10">
                                 <div class="size-204 flex-w flex-m respon6-next">
                                     <div class="wrap-num-product flex-w m-r-20 m-tb-10">
-                                        <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                        <div class="btn-up cl8 hov-btn3 trans-04 flex-c-m">
                                             <i class="fs-16 zmdi zmdi-minus"></i>
                                         </div>
 
-                                        <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+                                        <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="0">
 
-                                        <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                                        <div class="btn-down cl8 hov-btn3 trans-04 flex-c-m">
                                             <i class="fs-16 zmdi zmdi-plus"></i>
                                         </div>
                                     </div>
@@ -219,7 +227,28 @@
                 </div>
             </div>
         </div>
-            <!-- Related Products -->
-                @Html.Action("Partial_ItemsByCateId", "Products")
-    </section>
+        <!-- Related Products -->
+        @Html.Action("Partial_ItemsByCateId", "Products")
+
+    </div>
+<script>
+    const minusBtn = document.querySelector('.btn-up');
+    const plusBtn = document.querySelector('.btn-down');
+    const qtyInput = document.querySelector('.num-product');
+
+    minusBtn.addEventListener('click', () => {
+        let currentQty = parseInt(qtyInput.value);
+        if (currentQty > 0) {
+            qtyInput.value = currentQty - 1;
+        }
+    });
+
+    plusBtn.addEventListener('click', () => {
+        let currentQty = parseInt(qtyInput.value);
+        qtyInput.value = currentQty + 1;
+    });
+</script>
 }
+
+
+

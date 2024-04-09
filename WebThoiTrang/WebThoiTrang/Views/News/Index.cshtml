@@ -131,8 +131,17 @@
                             <div class="flex-w flex-sb-m p-t-18">
                                 <span class="flex-w flex-m stext-111 cl2 p-r-30 m-tb-10">
                                     <span>
-                                        <span class="cl4">By</span> @item.CreatedBy
-                                        <span class="cl12 m-l-4 m-r-6">|</span>
+                                        @if (@item.CreatedBy == null)
+                                        {
+
+
+                                            <span class="cl4">By Admin</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="cl4">By @item.CreatedBy</span>
+                                        }
+                                        <span class="cl12 m-l-4 m-r-6">@item.CreatedDate</span>
                                     </span>
                                 </span>
 
