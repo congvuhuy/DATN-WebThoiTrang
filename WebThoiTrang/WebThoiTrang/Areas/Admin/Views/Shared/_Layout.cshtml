@@ -166,7 +166,7 @@
             </a>
 
             @Html.Partial("_PartialSideBar")
-          
+
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
@@ -218,7 +218,8 @@
     <!-- AdminLTE for demo purposes -->
     @*<script src="~/Content/clients/dist/js/demo.js"></script>*@
     <!-- Page specific script -->
-    <script>$(function () {
+    <script>
+    $(function () {
             //Initialize Select2 Elements
             $('.select2').select2()
 
@@ -278,6 +279,8 @@
     <script src="~/Content/ckeditor/ckeditor.js"></script>
     <script src="~/Content/ckfinder/ckfinder.js"></script>
     @RenderSection("scripts", required: false)
+    
+
 </body>
 </html>
 

@@ -53,7 +53,7 @@ namespace WebThoiTrang.Controllers
         {
             var cateid = db.Products.Find(id).ProductCategoryId;
             var items = db.Products.Where(x => x.ProductCategoryId == cateid).ToList();
-            return View(items);
+            return PartialView(items);
         }
         public ActionResult Partial_ProductFeature()
         {

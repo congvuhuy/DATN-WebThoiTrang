@@ -14,6 +14,12 @@ namespace WebThoiTrang
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "About",
+                url: "gioi-thieu",
+                defaults: new { controller = "Home", action = "GioiThieu", alias = UrlParameter.Optional },
+                namespaces: new[] { "WebThoiTrang.Controllers" }
+            );
+            routes.MapRoute(
                 name: "Contact",
                 url: "lien-he",
                 defaults: new { controller = "Contact", action = "Index", alias = UrlParameter.Optional },

@@ -26,5 +26,9 @@ namespace WebThoiTrang.Controllers
 
             return View();
         }
+        public ActionResult GIoiThieu()
+        {
+            return View();
+        }
     }
 }
