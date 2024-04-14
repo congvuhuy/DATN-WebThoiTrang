@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebThoiTrang.Models.ShoppingCartItem>
+@using WebBanHangOnline.Common
+
+@if (Model != null && Model.Any())
+{
+    <h3>GIỎ HÀNG <span style="float:right;position:relative"><small>@Model.Count()</small></span></h3>
+    var i = 0;
+    var tongtien = decimal.Zero;
+    <div style="border:1px solid #808080;">
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                tongtien += item.TotalPrice;
+            <tr>
+                <td>@item.ProductName</td>
+                <td class="text-center">@item.Quantity</td>
+                <td class="text-center">@WebThoiTrang.Common.Common.FormatNumber(item.Price, 0) đồng</td>
+            </tr>
+            }
+            <tr>
+                <td>Tổng tiền</td>
+                <td colspan="2">@WebThoiTrang.Common.Common.FormatNumber(tongtien, 0) đồng</td>
+            </tr>
+        </table>
+    </div>
+
+}
+else
+{
+
+}
+

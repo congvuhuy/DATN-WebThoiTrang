@@ -26,8 +26,9 @@
     });
     $('body').on('click', '.btnUpdate', function (e) {
         e.preventDefault();
+        //alert($('#quantity').val());
         var id = $(this).data("id");
-        var quantity = $('#Quantity_' + id).val();
+        var quantity = $('#quantity').val();
         Update(id, quantity);
 
     });
@@ -37,6 +38,8 @@
         //debugger;
         if (conf == true) {
             DeleteAll();
+            $('.checkout_items').attr('data-notify', rs.Count);
+            LoadCart();
         }
 
     });
