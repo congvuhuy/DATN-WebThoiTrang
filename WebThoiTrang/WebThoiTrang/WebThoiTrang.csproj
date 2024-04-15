@@ -3400,6 +3400,9 @@
     <Content Include="Content\assets\vendor\slick\slick.less" />
     <Content Include="Content\assets\vendor\slick\slick.scss" />
     <Content Include="Areas\Admin\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Partial_SanPham.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3470,7 +3473,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
