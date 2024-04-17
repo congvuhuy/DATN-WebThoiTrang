@@ -113,4 +113,5 @@ D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\CKFinder.dll
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\CKFinder.pdb
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db01.resources
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.GenerateResource.cache
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db.resources
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.AssemblyReference.cache

@@ -158,8 +158,10 @@
 
 @if (Request.IsAuthenticated)
 {
-<div style="display:none">
-    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { @id = "logOffForm" }))
-    {
-@Html.AntiForgeryToken()}
-</div>}
+    <div style="display:none">
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { @id = "logOffForm" }))
+        {
+            @Html.AntiForgeryToken()
+        }
+    </div>
+}
