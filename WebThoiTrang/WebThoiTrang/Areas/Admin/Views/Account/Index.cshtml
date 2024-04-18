@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<WebThoiTrang.Models.ApplicationUser>
+@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework
+@using WebThoiTrang.Models
 @{
     ViewBag.Title = "Quản lý tài khoản";
 }
@@ -37,6 +40,7 @@
                         <th>Tài khoản</th>
                         <th>Họ tên</th>
                         <th>Email</th>
+                        <th>Role</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -51,9 +55,12 @@
                                 <td>@item.UserName</td>
                                 <td>@item.FullName</td>
                                 <td>@item.Email</td>
+
+                                <td>@GetRoles(@item.Id)</td>
+
                                 <td>
-                                    <a href="/admin/account/edit/@item.UserName" class="btn btn-sm btn-primary">Sửa</a>
-                                    <a href="#" data-user="@item.UserName" class="btn btn-sm btn-danger btnDelete">Xóa</a>
+                                    <a href="/admin/account/edit/@item.Id" class="btn btn-sm btn-primary">Sửa</a>
+                                    <a href="#" data-user="@item.Id" class="btn btn-sm btn-danger btnDelete">Xóa</a>
                                 </td>
                             </tr>
                             i++;
@@ -73,3 +80,48 @@
 
 </section>
 <!-- /.content -->
+@functions {
+    public string GetRoles(string userId)
+    {
+        var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())); // Khởi tạo UserManager
+
+        var user = userManager.FindById(userId); // Tìm người dùng dựa trên userId
+
+        if (user != null)
+        {
+            var roles = userManager.GetRoles(user.Id); // Lấy danh sách vai trò của người dùng
+
+            return string.Join(", ", roles); // Gộp các tên vai trò thành một chuỗi, ví dụ "Role1, Role2"
+        }
+
+        return "Unknown"; // Trả về "Unknown" nếu không tìm thấy người dùng hoặc vai trò
+    }
+}
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $(".btnDelete").click(function() {
+                var userName = $(this).data("user");
+
+                if (confirm('Bạn có chắc chắn muốn xóa tài khoản này không?')) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/Admin/Account/Delete', // Điều chỉnh URL endpoint theo đường dẫn thực tế của bạn
+                        data: { id: userName },
+                        success: function(response) {
+                            if (response.success) {
+                                alert('Tài khoản đã được xóa thành công.');
+                                location.reload(); // Reload trang sau khi xóa thành công
+                            } else {
+                                alert('Đã xảy ra lỗi khi xóa tài khoản.');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Lỗi khi gửi yêu cầu xóa tài khoản: ' + error);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

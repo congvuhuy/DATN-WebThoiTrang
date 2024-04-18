@@ -86,6 +86,28 @@ namespace WebThoiTrang.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
+    public class EditAccountViewModel
+    {
+        public string UserId { get; set; }
+
+        [Required]
+        [Display(Name = "Username")]
+        public string UserName { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+
+        [Display(Name = "Phone Number")]
+        public string Phone { get; set; }
+
+        [Display(Name = "Role")]
+        public string Role { get; set; }
+    }
     public class RegisterViewModel
     {
         [Required]

@@ -4,6 +4,7 @@ using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -11,7 +12,7 @@ using WebThoiTrang.Models;
 
 namespace WebThoiTrang.Areas.Admin.Controllers
 {
-    //[Authorize(Roles = "Admin,Employee")]
+    [Authorize(Roles = "Admin")]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -174,6 +175,98 @@ namespace WebThoiTrang.Areas.Admin.Controllers
             {
                 ModelState.AddModelError("", error);
             }
+        }
+        //xóa
+        [HttpPost]
+        public async Task<ActionResult> Delete(string id)
+        {
+            var user = await UserManager.FindByIdAsync(id);
+
+            if (user == null)
+            {
+                return Json(new { success = false });
+            }
+
+            var result = await UserManager.DeleteAsync(user);
+
+            if (result.Succeeded)
+            {
+                return Json(new { success = true });
+            }
+
+            AddErrors(result);
+            return Json(new { success = false });
+        }
+
+        // GET: /Account/Edit
+        [HttpGet]
+        public async Task<ActionResult> Edit(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var user = await UserManager.FindByIdAsync(id);
+
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+
+            var model = new EditAccountViewModel
+            {
+                UserId = user.Id,
+                UserName = user.UserName,
+                Email = user.Email,
+                FullName = user.FullName,
+                Phone = user.Phone
+                // Add any additional properties you want to update
+            };
+
+            ViewBag.Role = new SelectList(db.Roles.ToList(), "Name", "Name");
+
+            return View(model);
+        }
+
+        //
+        // POST: /Account/Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(EditAccountViewModel model, string id)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Role = new SelectList(db.Roles.ToList(), "Name", "Name");
+                return View(model);
+            }
+
+            var user = await UserManager.FindByIdAsync(model.UserId);
+
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+
+            user.UserName = model.UserName;
+            user.Email = model.Email;
+            user.FullName = model.FullName;
+            user.Phone = model.Phone;
+            // Edit any additional properties here
+
+            var result = await UserManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                UserManager.RemoveFromRoles(user.Id, UserManager.GetRoles(user.Id).ToArray());
+                UserManager.AddToRole(user.Id, model.Role);
+
+                return RedirectToAction("Index", "Account");
+            }
+
+            AddErrors(result);
+            ViewBag.Role = new SelectList(db.Roles.ToList(), "Name", "Name");
+            return View(model);
         }
     }
 }
