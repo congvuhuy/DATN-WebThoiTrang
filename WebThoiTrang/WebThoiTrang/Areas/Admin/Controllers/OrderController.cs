@@ -11,6 +11,7 @@ using System.Data.Entity;
 
 namespace WebThoiTrang.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Employee")]
     //[Authorize(Roles = "Admin")]
     public class OrderController : Controller
     {

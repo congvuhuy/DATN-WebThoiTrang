@@ -221,11 +221,12 @@ namespace WebThoiTrang.Areas.Admin.Controllers
                 Email = user.Email,
                 FullName = user.FullName,
                 Phone = user.Phone
+                
                 // Add any additional properties you want to update
             };
-
+           
             ViewBag.Role = new SelectList(db.Roles.ToList(), "Name", "Name");
-
+            
             return View(model);
         }
 

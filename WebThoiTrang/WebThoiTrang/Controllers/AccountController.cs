@@ -55,7 +55,8 @@ namespace WebThoiTrang.Controllers
         {
             var user = await UserManager.FindByEmailAsync(req.Email);
             user.FullName = req.FullName;
-            user.PhoneNumber = req.Phone;
+            user.Phone = req.Phone;
+            user.UserName = req.UserName;
             var res = await UserManager.UpdateAsync(user);
             if (res.Succeeded)
             {
@@ -156,7 +157,6 @@ namespace WebThoiTrang.Controllers
                     return View(model);
             }
         }
-
         //
         // GET: /Account/Register
         [AllowAnonymous]
@@ -174,7 +174,7 @@ namespace WebThoiTrang.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser {Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

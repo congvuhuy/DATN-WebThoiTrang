@@ -8,7 +8,7 @@ using WebThoiTrang.Models.EF;
 
 namespace WebThoiTrang.Areas.Admin.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Employee")]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

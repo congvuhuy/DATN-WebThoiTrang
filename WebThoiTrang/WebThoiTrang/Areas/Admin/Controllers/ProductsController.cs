@@ -9,7 +9,7 @@ using WebThoiTrang.Models.EF;
 
 namespace WebThoiTrang.Areas.Admin.Controllers
 {
-    //[Authorize(Roles = "Admin,Employee")]
+    [Authorize(Roles = "Admin,Employee")]
     public class ProductsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

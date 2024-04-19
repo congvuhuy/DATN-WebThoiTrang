@@ -8,6 +8,8 @@ using WebThoiTrang.Models.EF;
 
 namespace WebBanHangOnline.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Employee")]
+
     public class ProductImageController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace WebThoiTrang.Controllers
 {
+    //[Authorize(Roles ="Customer")]
     public class HomeController : Controller
     {
         public ActionResult Index()
