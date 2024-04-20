@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using WebThoiTrang.Common
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home 02</title>
+    <title>@ViewBag.Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -34,6 +35,10 @@
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/main.css">
     <!--===============================================================================================-->
+    <meta name="description" content="@ViewBag.SeoDescription" />
+    <meta name="keywords" itemprop="keywords" content="@ViewBag.SeoKeyWord" />
+    <meta property="og:title" itemprop="name" content="@ViewBag.Title" />
+    <meta property="og:description" content="@ViewBag.SeoDescription" />
 </head>
 <body class="animsition">
     <!-- Header -->
@@ -43,7 +48,7 @@
             <div class="top-bar">
                 <div class="content-topbar flex-sb-m h-full container">
                     <div class="left-top-bar">
-                        Hotline:Hotline: @SettingHelper.GetValue("SettingHotline")
+                        Hotline: @SettingHelper.GetValue("SettingHotline")
                     </div>
 
                     <div class="right-top-bar flex-w h-full">
@@ -69,10 +74,9 @@
                 <nav class="limiter-menu-desktop p-l-45">
 
                     <!-- Logo desktop -->
-                    <a href="~/Content/assets/#" class="logo">
-                        <img src="~/Content/assets/images/icons/logo-01.png" alt="IMG-LOGO">
+                    <a href="/Home/Index" class="logo">
+                        <img src="@SettingHelper.GetValue("SettingLogo")" alt="IMG-LOGO">
                     </a>
-
                     <!-- Menu desktop -->
                     <div class="menu-desktop">
                         @Html.Action("MenuTop", "Menu")

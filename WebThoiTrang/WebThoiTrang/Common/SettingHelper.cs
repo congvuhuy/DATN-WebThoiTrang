@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using WebThoiTrang.Models;
 
-namespace WebBanHangOnline.Common
+namespace WebThoiTrang.Common
 {
     public class SettingHelper
     {
