@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "VnpayReturn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_responsive.css">*@
+<div class="container product_section_container">
+    <div class="row">
+        <div class="col product_section clearfix">
+
+            <!-- Breadcrumbs -->
+            <div class="container">
+                <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+                    <a href="/home/index" class="stext-109 cl8 hov-cl1 trans-04">
+                        Home
+                        <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+                    </a>
+                    <span class="stext-109 cl4">
+                       Thanh toán
+                    </span>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <!-- Main Content -->
+            <div class="row">
+
+                <div class="col-md-12 text-center">
+                    <h1 class="">Thanh toán</h1>
+                    @if (ViewBag.ThanhToanThanhCong != null)
+                    {
+                        <p>Bạn đã thanh toán thành công với @ViewBag.ThanhToanThanhCong!</p>
+                    }
+                    <p>@ViewBag.InnerText</p>
+                </div>
+
+            </div>
+            <hr />
+            @*<div class="row">
+            <div id="show_success"></div>
+            <div class="col-md-9">
+
+            </div>
+
+        </div>*@
+        </div>
+    </div>
+</div>
+

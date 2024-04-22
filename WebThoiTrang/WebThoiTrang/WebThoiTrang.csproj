@@ -209,6 +209,14 @@
     <Compile Include="Migrations\202404161600253_db.Designer.cs">
       <DependentUpon>202404161600253_db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404221451095_db_update_order.cs" />
+    <Compile Include="Migrations\202404221451095_db_update_order.Designer.cs">
+      <DependentUpon>202404221451095_db_update_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404221505334_db1.cs" />
+    <Compile Include="Migrations\202404221505334_db1.Designer.cs">
+      <DependentUpon>202404221505334_db1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -230,6 +238,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OrderViewModel.cs" />
+    <Compile Include="Models\Payments\VnPayLibrary.cs" />
     <Compile Include="Models\SettingSystemViewModel.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -331,6 +340,7 @@
     <Content Include="Content\assets\images\thumb-01.jpg" />
     <Content Include="Content\assets\images\thumb-02.jpg" />
     <Content Include="Content\assets\images\thumb-03.jpg" />
+    <Content Include="Content\assets\js\categories_custom.js" />
     <Content Include="Content\assets\js\main.js" />
     <Content Include="Content\assets\js\map-custom.js" />
     <Content Include="Content\assets\js\slick-custom.js" />
@@ -3439,10 +3449,13 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jsConvert.js" />
     <Content Include="Scripts\jsShopping.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
@@ -3500,6 +3513,7 @@
     <Content Include="Views\ShoppingCart\Partial_Item_ThanhToan.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOutSuccess.cshtml" />
     <Content Include="Views\Account\Profile.cshtml" />
+    <Content Include="Views\ShoppingCart\VnpayReturn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3525,6 +3539,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404161600253_db.resx">
       <DependentUpon>202404161600253_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404221451095_db_update_order.resx">
+      <DependentUpon>202404221451095_db_update_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404221505334_db1.resx">
+      <DependentUpon>202404221505334_db1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
