@@ -1,4 +1,4 @@
-﻿
+﻿@using WebThoiTrang.Models.Common
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -8,5 +8,5 @@
         background-image:src('../../../../Content/assets/images/about-01.jpg')
     }
 </style>*@
-<h2>Chào</h2>
+<h2>Chào @User.Identity.Name</h2>
 

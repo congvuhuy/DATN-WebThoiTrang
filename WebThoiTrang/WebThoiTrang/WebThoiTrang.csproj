@@ -192,6 +192,7 @@
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\SettingHelper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
@@ -341,6 +342,7 @@
     <Content Include="Content\assets\images\thumb-02.jpg" />
     <Content Include="Content\assets\images\thumb-03.jpg" />
     <Content Include="Content\assets\js\categories_custom.js" />
+    <Content Include="Content\assets\js\contact_custom.js" />
     <Content Include="Content\assets\js\main.js" />
     <Content Include="Content\assets\js\map-custom.js" />
     <Content Include="Content\assets\js\slick-custom.js" />
@@ -3514,6 +3516,7 @@
     <Content Include="Views\ShoppingCart\CheckOutSuccess.cshtml" />
     <Content Include="Views\Account\Profile.cshtml" />
     <Content Include="Views\ShoppingCart\VnpayReturn.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

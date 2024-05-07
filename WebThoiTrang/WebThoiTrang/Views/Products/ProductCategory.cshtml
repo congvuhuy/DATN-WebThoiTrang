@@ -4,7 +4,73 @@
     ViewBag.Title = "trang chu san pham theo danh muc";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .product_bubble {
+        position: absolute;
+        top: 15px;
+        width: 50px;
+        height: 22px;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
 
+        .product_bubble span {
+            font-size: 12px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+    .product_bubble_right::after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 6px;
+        right: auto;
+        top: auto;
+        bottom: -6px;
+        border: 6px solid;
+    }
+
+    .product_bubble_left::after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: auto;
+        right: 6px;
+        bottom: -6px;
+        border: 6px solid;
+    }
+
+    .product_bubble_red::after {
+        border-color: transparent transparent transparent #fe4c50;
+    }
+
+    .product_bubble_green::after {
+        border-color: transparent transparent transparent #51a042;
+    }
+
+    .product_bubble_left::after {
+        border-color: #51a042 #51a042 transparent transparent;
+    }
+
+    .product_bubble_red {
+        background: #fe4c50;
+    }
+
+    .product_bubble_green {
+        background: #51a042;
+    }
+
+    .product_bubble_left {
+        left: 15px;
+    }
+
+    .product_bubble_right {
+        right: 20px;
+    }
+</style>
 <div class="bg0 m-t-23 p-b-140">
     <div class="container">
         <div class="bread-crumb flex-w p-r-15 p-t-30 p-lr-0-lg">
@@ -269,9 +335,22 @@
                                         @item.Title
                                     </a>
 
-                                    <span class="stext-105 cl3">
-                                        @WebThoiTrang.Common.Common.FormatNumber(item.Price, 0) đồng
-                                    </span>
+                                    @if (item.IsSale)
+                                    {
+                                        <div class="product_bubble product_bubble_right product_bubble_green d-flex flex-column align-items-center"><span>sale</span></div>
+                                    }
+                                    <div class="stext-105 cl3">
+                                        @if (item.IsSale)
+                                        {
+                                            <div>@WebThoiTrang.Common.Common.FormatNumber(item.Price, 0)đ<span style="text-decoration: line-through; opacity: 0.6">@WebThoiTrang.Common.Common.FormatNumber(item.PriceSale, 0) đ</span></div>
+                                            <div style="display:none;" class="in_product_price"> @item.PriceSale đồng</div>
+                                        }
+                                        else
+                                        {
+                                            <div>@WebThoiTrang.Common.Common.FormatNumber(item.Price, 0)đ</div>
+                                            <div style="display:none" class="in_product_price"> @item.Price đ</div>
+                                        }
+                                    </div>
                                 </div>
 
                                 @*<div class="block2-txt-child2 flex-r p-t-3">

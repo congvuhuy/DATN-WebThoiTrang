@@ -27,7 +27,7 @@ namespace WebThoiTrang.Areas.Admin.Controllers
                 page = 1;
             }
             var pageNumber = page ?? 1;
-            var pageSize = 5;
+            var pageSize = 8;
             ViewBag.PageSize = pageSize;
             ViewBag.Page = pageNumber;
             return View(items.ToPagedList(pageNumber, pageSize));

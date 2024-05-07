@@ -61,6 +61,19 @@ namespace WebThoiTrang.Controllers
                             db.Orders.Attach(itemOrder);
                             db.Entry(itemOrder).State = System.Data.Entity.EntityState.Modified;
                             db.SaveChanges();
+                            foreach (var item in itemOrder.OrderDetails)
+                            {
+                                var product = db.Products.FirstOrDefault(p => p.Id == item.ProductId);
+                                if (product != null)
+                                {
+                                    // Trừ số lượng sản phẩm đã mua từ giỏ hàng
+                                    product.Quantity -= item.Quantity;
+                                    // Cập nhật thông tin sản phẩm vào cơ sở dữ liệu
+                                    db.Products.Attach(product);
+                                    db.Entry(product).State = System.Data.Entity.EntityState.Modified;
+                                    db.SaveChanges();
+                                }
+                            }
                         }
                         //Thanh toan thanh cong
                         ViewBag.InnerText = "Giao dịch được thực hiện thành công. Cảm ơn quý khách đã sử dụng dịch vụ";

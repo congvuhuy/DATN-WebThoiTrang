@@ -5,6 +5,7 @@
     ViewBag.SeoDescription = Model.SeoDescription ?? Model.Title;
     ViewBag.SeoKeyWord = Model.SeoKeywords ?? Model.Title;
 }
+
 <style>
     .btn-up,
     .btn-down {
@@ -52,7 +53,16 @@
                         </h4>
 
                         <span class="mtext-106 cl2">
-                            @WebThoiTrang.Common.Common.FormatNumber(Model.Price, 0) đồng
+                            @if (Model.PriceSale > 0)
+                            {
+                                <div class="product_price">@WebThoiTrang.Common.Common.FormatNumber(Model.PriceSale, 0)đ<span style="text-decoration:line-through;opacity:0.6">@WebThoiTrang.Common.Common.FormatNumber(Model.Price, 0) đ</span></div>
+                                <div style="display:none;" class="in_product_price"> @Model.PriceSale</div>
+                            }
+                            else
+                            {
+                                <div class="product_price">@WebThoiTrang.Common.Common.FormatNumber(Model.Price, 0)</div>
+                                <div style="display:none;" class="in_product_price"> @Model.Price</div>
+                            }
                         </span>
 
                         <p class="stext-102 cl3 p-t-23">
