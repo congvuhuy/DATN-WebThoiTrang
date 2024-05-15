@@ -117,3 +117,7 @@ D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db.res
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.csproj.AssemblyReference.cache
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db_update_order.resources
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.db1.resources
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.dbreview.resources
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.dbreviewNew.resources
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.dbreviewUpdate.resources
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Debug\WebThoiTrang.Migrations.dbreviewUpdate1.resources

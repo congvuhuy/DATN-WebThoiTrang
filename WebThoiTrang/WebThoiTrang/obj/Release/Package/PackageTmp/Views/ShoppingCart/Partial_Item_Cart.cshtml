@@ -13,12 +13,12 @@
                         <div class="wrap-table-shopping-cart">
                             <table class="table-shopping-cart">
                                 <tr class="table_head">
-                                    <th class="txt-center column-1">Product</th>
-                                    <th class="txt-center column-2">Product Name</th>
-                                    <th class="txt-center column-3">Price</th>
-                                    <th class="txt-center column-4">Quantity</th>
-                                    <th class="txt-center column-5">Total</th>
-                                    <th class="txt-center column-6">Option</th>
+                                    <th class="txt-center column-1">Hình ảnh</th>
+                                    <th class="txt-center column-2">Tến sản phẩm</th>
+                                    <th class="txt-center column-3">Giá</th>
+                                    <th class="txt-center column-4">Số lượng</th>
+                                    <th class="txt-center column-5">Số lượng</th>
+                                    <th class="txt-center column-6">Lựa chọn</th>
                                 </tr>
 
                                 @foreach (var item in Model)
@@ -49,10 +49,10 @@
                                 <td class="column-5 txt-center "> @WebThoiTrang.Common.Common.FormatNumber(item.TotalPrice, 0) đồng</td>
                                 <td class="column-6 txt-center ">
                                     <div data-id="@item.ProductId" class="btnDelete flex-c-m stext-80 cl2 size-90 bg8 bor11 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
-                                        Delete
+                                        Xóa
                                     </div>
                                     <div data-id="@item.ProductId" class="btnUpdate flex-c-m stext-80 cl2 size-90 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
-                                        Update
+                                        Cập nhật
                                     </div>
                                 </td>
                             </tr>
@@ -66,11 +66,11 @@
                                 <input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code">
 
                                 <div class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
-                                    Apply coupon
+                                    Mã Khuyển Mại
                                 </div>
                             </div>
                             <div class="btnDeleteAll flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
-                               Delete All
+                               Xóa tất cả
                             </div>
 
                         </div>

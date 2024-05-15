@@ -84,5 +84,61 @@ namespace WebThoiTrang.Common
                        || value is double
                        || value is decimal;
         }
+        public static string HtmlRate(int rate)
+        {
+            var str = "";
+           
+            if (rate == 1)
+            {
+                str = @"
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi'></i>
+                    <i class='zmdi'></i>
+                    <i class='zmdi'></i>
+                    <i class='zmdi'></i>
+                ";
+            }
+            if (rate == 2)
+            {
+                str = @"
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi '></i>
+                    <i class='zmdi '></i>
+                    <i class='zmdi '></i>
+                ";
+            }
+            if (rate == 3)
+            {
+                str = @"
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi '></i>
+                    <i class='zmdi '></i>
+                ";
+            }
+            if (rate == 4)
+            {
+                str = @"
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi '></i>
+                ";
+            }
+            if (rate == 5)
+            {
+                str = @"
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                    <i class='zmdi zmdi-star'></i>
+                ";
+            }
+            return str;
+        }
     }
 }

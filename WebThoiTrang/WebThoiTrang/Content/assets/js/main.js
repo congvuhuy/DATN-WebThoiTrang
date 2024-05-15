@@ -224,8 +224,8 @@
         $(this).prev().val(numProduct + 2);
     });
 
-    /*==================================================================
-    [ Rating ]*/
+    ==================================================================
+    //[ Rating ]
     $('.wrap-rating').each(function(){
         var item = $(this).find('.item-rating');
         var rated = -1;
@@ -245,11 +245,12 @@
                 $(item[j]).removeClass('zmdi-star');
             }
         });
-
-        $(item).on('click', function(){
+        
+        $(item).on('click', function () {
             var index = item.index(this);
             rated = index;
-            $(input).val(index+1);
+            $(input).val(index + 1);
+            $('#txtRate').val(index + 1)  
         });
 
         $(this).on('mouseleave', function(){

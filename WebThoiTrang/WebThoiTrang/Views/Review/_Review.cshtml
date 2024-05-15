@@ -1,0 +1,81 @@
+﻿@model WebThoiTrang.Models.EF.ReviewProduct
+
+@using (Ajax.BeginForm("PostReview", "Review", new AjaxOptions
+{
+    HttpMethod = "POST",
+    UpdateTargetId = "load_review",
+    OnSuccess = "OnSuccessRE",
+    OnFailure = "OnFailureRE",
+    OnBegin = "OnBeginRE"
+
+}, new { @Id = "review_form" }))
+{
+    <script>
+        function OnBeginRE() {
+            $('#review_submit').attr("disabled", "disabled");
+            $('#load_send').html('<h2>Đang gửi....</h2>');
+        }
+        function OnSuccessRE(res) {
+            if (res.Success) {
+                $('#review_form')[0].reset();
+            }
+        }
+        function OnFailure() {
+            if (!res.Success) {
+                $('#review_form')[0].reset();
+            }
+        }
+    </script>
+    @Html.AntiForgeryToken()
+    @*<form class="w-full">*@
+    <h5 class="mtext-108 cl2 p-b-7">
+        Add a review
+    </h5>
+
+    <p class="stext-102 cl6">
+        Your email address will not be published. Required fields are marked *
+    </p>
+
+    <div class="flex-w flex-m p-t-50 p-b-23">
+        <span class="stext-102 cl3 m-r-16">
+            Your Rating
+        </span>
+        @*<input type="text" id="textRate" name="Rate"/>*@
+        <span class="wrap-rating fs-18 cl11 pointer">
+            <i class="item-rating pointer zmdi zmdi-star-outline"></i>
+            <i class="item-rating pointer zmdi zmdi-star-outline"></i>
+            <i class="item-rating pointer zmdi zmdi-star-outline"></i>
+            <i class="item-rating pointer zmdi zmdi-star-outline"></i>
+            <i class="item-rating pointer zmdi zmdi-star-outline"></i>
+            <input class="dis-none" id="textRate" type="number" name="Rate">
+        </span>
+    </div>
+
+    <div class="row p-b-25">
+        <div class="col-12 p-b-5">
+            <label class="stext-102 cl3" for="review">Your review</label>
+            @Html.TextAreaFor(x => x.Content, new { @class = "size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10", @placeholder = "Your Review", id = "review" })
+
+            @*<textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10" id="review" name="review"></textarea>*@
+        </div>
+
+        <div class="col-sm-6 p-b-5">
+            <label class="stext-102 cl3" for="name">Name</label>
+            @Html.TextBoxFor(x => x.FullName, new { @class = "size-111 bor8 stext-102 cl2 p-lr-20", @placeholder = "Name", id = "name" })
+
+            @*<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text" name="name">*@
+        </div>
+            @Html.HiddenFor(x => x.UserName)
+            @Html.HiddenFor(x => x.ProductId, new { @Value = ViewBag.ProductId })
+        <div class="col-sm-6 p-b-5">
+            <label class="stext-102 cl3" for="email">Email</label>
+            @Html.TextBoxFor(x => x.Email, new { @class = "size-111 bor8 stext-102 cl2 p-lr-20", @placeholder = "Email", id = "email" })
+            @*<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email" type="text" name="email">*@
+        </div>
+    </div>
+    <div class="form-group" id="load_send"></div>
+    <button id="review_submit" value="Submit" class="review-submit-button flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10">
+        Submit
+    </button>
+    @*</form>*@
+}

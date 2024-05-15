@@ -1,4 +1,5 @@
-﻿@model IEnumerable<WebThoiTrang.Models.EF.News>
+﻿@model PagedList.PagedList<WebThoiTrang.Models.EF.News>
+@using PagedList.Mvc
 @{
     ViewBag.Title = "Trang chu tin tuc";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -21,6 +22,7 @@
                     <!-- item blog -->
                     @foreach (var item in Model)
                     {
+                        var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
                         <div class="p-b-63">
                             <a href="@item.Alias-n@(item.Id)" class="hov-img0 how-pos5-parent">
                                 <img src="@item.Image" alt="IMG-BLOG">
@@ -72,22 +74,23 @@
 
                     <!-- item blog -->
                     <!-- Pagination -->
-                    <div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-                        <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
-                            1
-                        </a>
+                    @*<div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
+                            <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
+                                1
+                            </a>
 
-                        <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7">
-                            2
-                        </a>
+                            <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7">
+                                2
+                            </a>
+                        </div>*@
+                    <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-6" style="text-align:right;">
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { LiElementClasses = new[] {  "flex-c-m" ,"how-pagination1", "trans-04", "m-all-2", "active-pagination1" } })
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
             @Html.Action("MenuRightNews", "Menu")
 
 

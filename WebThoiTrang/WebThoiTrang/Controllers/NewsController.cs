@@ -15,6 +15,7 @@ namespace WebThoiTrang.Controllers
         // GET: News
         public ActionResult Index(int? page)
         {
+
             var pageSize = 1;
             if (page == null)
             {
