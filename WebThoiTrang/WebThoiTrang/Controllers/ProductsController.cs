@@ -15,7 +15,7 @@ namespace WebThoiTrang.Controllers
         // GET: Products
         public ActionResult Index(int?page)
         {
-            var pageSize = 8;
+            var pageSize = 6;
             if (page == null)
             {
                 page = 1;
@@ -42,9 +42,9 @@ namespace WebThoiTrang.Controllers
             return View(item);
         }
         
-        public ActionResult ProductCategory(string alias, int id)
+        public ActionResult ProductCategory(string alias, int id, int?page)
         {
-            var items = db.Products.ToList();
+            IEnumerable<Product> items = db.Products.ToList();
             if (id > 0)
             {
                 items = items.Where(x => x.ProductCategoryId == id).ToList();
@@ -54,7 +54,15 @@ namespace WebThoiTrang.Controllers
             {
                 ViewBag.CateName = cate.Title;
             }
-
+            var pageSize = 6;
+            if (page == null)
+            {
+                page = 1;
+            }
+            var pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
+             items = items.ToPagedList(pageIndex, pageSize);
+            ViewBag.PageSize = pageSize;
+            ViewBag.Page = page;
             ViewBag.CateId = id;
             return View(items);
         }

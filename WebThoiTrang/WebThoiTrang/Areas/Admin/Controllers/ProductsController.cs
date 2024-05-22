@@ -138,7 +138,7 @@ namespace WebThoiTrang.Areas.Admin.Controllers
                 item.IsActive = !item.IsActive;
                 db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                return Json(new { success = true, isAcive = item.IsActive });
+                return Json(new { success = true, IsActive = item.IsActive });
             }
 
             return Json(new { success = false });
@@ -169,7 +169,30 @@ namespace WebThoiTrang.Areas.Admin.Controllers
                 db.SaveChanges();
                 return Json(new { success = true, IsSale = item.IsSale });
             }
-
+            return Json(new { success = false });
+        }
+        public ActionResult IsHot(int id)
+        {
+            var item = db.Products.Find(id);
+            if (item != null)
+            {
+                item.IsHot = !item.IsHot;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return Json(new { success = true, IsHot = item.IsHot });
+            }
+            return Json(new { success = false });
+        }
+        public ActionResult IsFeature(int id)
+        {
+            var item = db.Products.Find(id);
+            if (item != null)
+            {
+                item.IsFeature = !item.IsFeature;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return Json(new { success = true, IsFeature = item.IsFeature });
+            }
             return Json(new { success = false });
         }
     }

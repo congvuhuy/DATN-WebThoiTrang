@@ -87,15 +87,25 @@ namespace WebThoiTrang.Common
         public static string HtmlRate(int rate)
         {
             var str = "";
-           
+            if (rate == 0)
+            {
+                str = @"
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                ";
+
+            }
             if (rate == 1)
             {
                 str = @"
                     <i class='zmdi zmdi-star'></i>
-                    <i class='zmdi'></i>
-                    <i class='zmdi'></i>
-                    <i class='zmdi'></i>
-                    <i class='zmdi'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
                 ";
             }
             if (rate == 2)
@@ -103,9 +113,9 @@ namespace WebThoiTrang.Common
                 str = @"
                     <i class='zmdi zmdi-star'></i>
                     <i class='zmdi zmdi-star'></i>
-                    <i class='zmdi '></i>
-                    <i class='zmdi '></i>
-                    <i class='zmdi '></i>
+                    <i class='zmdi zmdi-star-outline '></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
                 ";
             }
             if (rate == 3)
@@ -114,8 +124,8 @@ namespace WebThoiTrang.Common
                     <i class='zmdi zmdi-star'></i>
                     <i class='zmdi zmdi-star'></i>
                     <i class='zmdi zmdi-star'></i>
-                    <i class='zmdi '></i>
-                    <i class='zmdi '></i>
+                    <i class='zmdi zmdi-star-outline'></i>
+                    <i class='zmdi zmdi-star-outline'></i>
                 ";
             }
             if (rate == 4)
@@ -125,7 +135,7 @@ namespace WebThoiTrang.Common
                     <i class='zmdi zmdi-star'></i>
                     <i class='zmdi zmdi-star'></i>
                     <i class='zmdi zmdi-star'></i>
-                    <i class='zmdi '></i>
+                    <i class='zmdi zmdi-star-outline'></i>
                 ";
             }
             if (rate == 5)

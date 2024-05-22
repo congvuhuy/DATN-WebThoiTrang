@@ -50,6 +50,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\code\WebBanHang\ckfinder\bin\Debug\CKFinder.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -204,42 +207,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202403271548119_db01.cs" />
-    <Compile Include="Migrations\202403271548119_db01.Designer.cs">
-      <DependentUpon>202403271548119_db01.cs</DependentUpon>
+    <Compile Include="Migrations\202405171516215_db.cs" />
+    <Compile Include="Migrations\202405171516215_db.Designer.cs">
+      <DependentUpon>202405171516215_db.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202404161600253_db.cs" />
-    <Compile Include="Migrations\202404161600253_db.Designer.cs">
-      <DependentUpon>202404161600253_db.cs</DependentUpon>
+    <Compile Include="Migrations\202405171745530_db-new.cs" />
+    <Compile Include="Migrations\202405171745530_db-new.Designer.cs">
+      <DependentUpon>202405171745530_db-new.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202404221451095_db_update_order.cs" />
-    <Compile Include="Migrations\202404221451095_db_update_order.Designer.cs">
-      <DependentUpon>202404221451095_db_update_order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404221505334_db1.cs" />
-    <Compile Include="Migrations\202404221505334_db1.Designer.cs">
-      <DependentUpon>202404221505334_db1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202405151349103_db-review.cs" />
-    <Compile Include="Migrations\202405151349103_db-review.Designer.cs">
-      <DependentUpon>202405151349103_db-review.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202405151350114_db-reviewNew.cs" />
-    <Compile Include="Migrations\202405151350114_db-reviewNew.Designer.cs">
-      <DependentUpon>202405151350114_db-reviewNew.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202405151355046_db-reviewUpdate.cs" />
-    <Compile Include="Migrations\202405151355046_db-reviewUpdate.Designer.cs">
-      <DependentUpon>202405151355046_db-reviewUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202405151358011_db-reviewUpdate1.cs" />
-    <Compile Include="Migrations\202405151358011_db-reviewUpdate1.Designer.cs">
-      <DependentUpon>202405151358011_db-reviewUpdate1.cs</DependentUpon>
+    <Compile Include="Migrations\202405171917122_db-new1.cs" />
+    <Compile Include="Migrations\202405171917122_db-new1.Designer.cs">
+      <DependentUpon>202405171917122_db-new1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
+    <Compile Include="Models\Common\ThongKeTruyCap.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
     <Compile Include="Models\EF\Adv.cs" />
     <Compile Include="Models\EF\Category.cs" />
@@ -261,6 +245,7 @@
     <Compile Include="Models\Payments\VnPayLibrary.cs" />
     <Compile Include="Models\SettingSystemViewModel.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\ThongKeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -268,33 +253,19 @@
     <Content Include="Content\assets\css\main.css" />
     <Content Include="Content\assets\css\util.css" />
     <Content Include="Content\assets\dist\css\adminlte.css" />
-    <Content Include="Content\assets\dist\css\adminlte.css.map" />
     <Content Include="Content\assets\dist\css\adminlte.min.css" />
-    <Content Include="Content\assets\dist\css\adminlte.min.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.components.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.components.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.components.min.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.components.min.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.core.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.core.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.core.min.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.core.min.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.extra-components.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.extra-components.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.extra-components.min.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.extra-components.min.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.light.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.light.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.light.min.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.light.min.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.pages.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.pages.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.pages.min.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.pages.min.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.plugins.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.plugins.css.map" />
     <Content Include="Content\assets\dist\css\alt\adminlte.plugins.min.css" />
-    <Content Include="Content\assets\dist\css\alt\adminlte.plugins.min.css.map" />
     <Content Include="Content\assets\dist\img\AdminLTELogo.png" />
     <Content Include="Content\assets\dist\img\avatar.png" />
     <Content Include="Content\assets\dist\img\avatar2.png" />
@@ -328,11 +299,8 @@
     <Content Include="Content\assets\dist\img\user6-128x128.jpg" />
     <Content Include="Content\assets\dist\img\user7-128x128.jpg" />
     <Content Include="Content\assets\dist\img\user8-128x128.jpg" />
-    <Content Include="Content\assets\dist\js\.eslintrc.json" />
     <Content Include="Content\assets\dist\js\adminlte.js" />
-    <Content Include="Content\assets\dist\js\adminlte.js.map" />
     <Content Include="Content\assets\dist\js\adminlte.min.js" />
-    <Content Include="Content\assets\dist\js\adminlte.min.js.map" />
     <Content Include="Content\assets\dist\js\demo.js" />
     <Content Include="Content\assets\dist\js\pages\dashboard.js" />
     <Content Include="Content\assets\dist\js\pages\dashboard2.js" />
@@ -362,6 +330,7 @@
     <Content Include="Content\assets\images\banner-09.jpg" />
     <Content Include="Content\assets\images\bg-01.jpg" />
     <Content Include="Content\assets\images\bg-02.jpg" />
+    <Content Include="Content\assets\images\bgAdmin.jpg" />
     <Content Include="Content\assets\images\blog-01.jpg" />
     <Content Include="Content\assets\images\blog-02.jpg" />
     <Content Include="Content\assets\images\blog-03.jpg" />
@@ -445,47 +414,13 @@
     <Content Include="Content\assets\plugins\easing\easing.js" />
     <Content Include="Content\assets\plugins\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="Content\assets\plugins\font-awesome-4.7.0\css\font-awesome.min.css" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\FontAwesome.otf" />
     <Content Include="Content\assets\plugins\font-awesome-4.7.0\HELP-US-OUT.txt" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\animated.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\bordered-pulled.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\core.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\fixed-width.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\font-awesome.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\icons.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\larger.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\list.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\mixins.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\path.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\rotated-flipped.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\screen-reader.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\stacked.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\variables.less" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\font-awesome.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_animated.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_core.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_fixed-width.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_icons.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_larger.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_list.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_mixins.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_path.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_screen-reader.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_stacked.scss" />
-    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_variables.scss" />
     <Content Include="Content\assets\plugins\Isotope\isotope.pkgd.min.js" />
     <Content Include="Content\assets\plugins\jquery-ui-1.12.1.custom\jquery-ui.css" />
     <Content Include="Content\assets\plugins\jquery-ui-1.12.1.custom\jquery-ui.js" />
     <Content Include="Content\assets\plugins\moment\locales.js" />
     <Content Include="Content\assets\plugins\moment\locales.min.js" />
-    <Content Include="Content\assets\plugins\moment\locales.min.js.map" />
     <Content Include="Content\assets\plugins\moment\locale\af.js" />
     <Content Include="Content\assets\plugins\moment\locale\ar-dz.js" />
     <Content Include="Content\assets\plugins\moment\locale\ar-kw.js" />
@@ -623,19 +558,14 @@
     <Content Include="Content\assets\plugins\moment\locale\zh-tw.js" />
     <Content Include="Content\assets\plugins\moment\moment-with-locales.js" />
     <Content Include="Content\assets\plugins\moment\moment-with-locales.min.js" />
-    <Content Include="Content\assets\plugins\moment\moment-with-locales.min.js.map" />
     <Content Include="Content\assets\plugins\moment\moment.min.js" />
-    <Content Include="Content\assets\plugins\moment\moment.min.js.map" />
     <Content Include="Content\assets\plugins\OwlCarousel2-2.2.1\ajax-loader.gif" />
     <Content Include="Content\assets\plugins\OwlCarousel2-2.2.1\animate.css" />
     <Content Include="Content\assets\plugins\OwlCarousel2-2.2.1\owl.carousel.css" />
     <Content Include="Content\assets\plugins\OwlCarousel2-2.2.1\owl.carousel.js" />
     <Content Include="Content\assets\plugins\OwlCarousel2-2.2.1\owl.theme.default.css" />
     <Content Include="Content\assets\plugins\OwlCarousel2-2.2.1\owl.video.play.png" />
-    <Content Include="Content\assets\plugins\themify-icons\fonts\themify.eot" />
     <Content Include="Content\assets\plugins\themify-icons\fonts\themify.svg" />
-    <Content Include="Content\assets\plugins\themify-icons\fonts\themify.ttf" />
-    <Content Include="Content\assets\plugins\themify-icons\fonts\themify.woff" />
     <Content Include="Content\assets\plugins\themify-icons\themify-icons.css" />
     <Content Include="Content\assets\styles\bootstrap4\bootstrap.min.css" />
     <Content Include="Content\assets\styles\bootstrap4\bootstrap.min.js" />
@@ -3737,6 +3667,62 @@
     <Content Include="Areas\Admin\Views\SettingSystem\Index.cshtml" />
     <Content Include="Areas\Admin\Views\SettingSystem\Partial_Setting.cshtml" />
     <Content Include="Areas\Admin\Views\Statistical\Index.cshtml" />
+    <Content Include="Content\assets\dist\css\adminlte.css.map" />
+    <Content Include="Content\assets\dist\css\adminlte.min.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.light.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.light.min.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Content\assets\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Content\assets\dist\js\.eslintrc.json" />
+    <Content Include="Content\assets\dist\js\adminlte.js.map" />
+    <Content Include="Content\assets\dist\js\adminlte.min.js.map" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Content\assets\plugins\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Content\assets\plugins\moment\locales.min.js.map" />
+    <Content Include="Content\assets\plugins\moment\moment-with-locales.min.js.map" />
+    <Content Include="Content\assets\plugins\moment\moment.min.js.map" />
+    <Content Include="Content\assets\plugins\themify-icons\fonts\themify.eot" />
+    <Content Include="Content\assets\plugins\themify-icons\fonts\themify.ttf" />
+    <Content Include="Content\assets\plugins\themify-icons\fonts\themify.woff" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3860,7 +3846,6 @@
     <Content Include="Views\Home\GIoiThieu.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\ShoppingCart\Partial_Item_Cart.cshtml" />
-    <Content Include="Views\Products\Detail.cshtml" />
     <Content Include="Views\Products\Partial_ItemsByCateId.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
     <Content Include="Views\ShoppingCart\Partial_CheckOut.cshtml" />
@@ -3871,8 +3856,10 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Menu\ProductCategoryFooter.cshtml" />
     <Content Include="Views\Home\Partial_Subcrice.cshtml" />
-    <Content Include="Views\Review\_Review.cshtml" />
+    <Content Include="Views\Products\Detail.cshtml" />
     <Content Include="Views\Review\_LoadReview.cshtml" />
+    <Content Include="Views\Review\_Review.cshtml" />
+    <Content Include="Views\Home\Refresh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3893,29 +3880,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202403271548119_db01.resx">
-      <DependentUpon>202403271548119_db01.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405171516215_db.resx">
+      <DependentUpon>202405171516215_db.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404161600253_db.resx">
-      <DependentUpon>202404161600253_db.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405171745530_db-new.resx">
+      <DependentUpon>202405171745530_db-new.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404221451095_db_update_order.resx">
-      <DependentUpon>202404221451095_db_update_order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404221505334_db1.resx">
-      <DependentUpon>202404221505334_db1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405151349103_db-review.resx">
-      <DependentUpon>202405151349103_db-review.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405151350114_db-reviewNew.resx">
-      <DependentUpon>202405151350114_db-reviewNew.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405151355046_db-reviewUpdate.resx">
-      <DependentUpon>202405151355046_db-reviewUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405151358011_db-reviewUpdate1.resx">
-      <DependentUpon>202405151358011_db-reviewUpdate1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405171917122_db-new1.resx">
+      <DependentUpon>202405171917122_db-new1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

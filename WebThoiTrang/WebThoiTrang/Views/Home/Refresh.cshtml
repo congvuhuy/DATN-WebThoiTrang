@@ -1,0 +1,107 @@
+﻿
+@model WebBanHangOnline.Models.ThongKeModel
+@if (Model != null)
+{
+    @*<div class="block2">
+        <ul>
+            <li class="p-b-6">
+                <a href="#" class="filter-link stext-106 trans-04 filter-link-active">
+                    All
+                </a>
+            </li>
+
+            <li class="p-b-6">
+                <a href="#" class="filter-link stext-106 trans-04">
+                    0đ - 300000đ
+                </a>
+              
+            </li>
+            <li class="p-b-6">
+               
+                <a href="#" class="filter-link stext-106 trans-04">
+                    300000đ - 400000đ
+                </a>
+              
+            </li>
+            <li class="p-b-6">
+               
+                <a href="#" class="filter-link stext-106 trans-04">
+                    400000đ - 500000đ
+                </a>
+                
+            </li>
+            <li class="p-b-6">
+                
+                <a href="#" class="filter-link stext-106 trans-04">
+                    500000đ - 600000đ
+                </a>
+            </li>
+        </ul>
+    </div>*@
+    <hr />
+    <div class="block1">
+        <table class="table">
+            <tr>
+                <td>Hôm nay</td>
+                <td>@Model.HomNay</td>
+            </tr>
+            <tr>
+                <td>Hôm qua</td>
+                <td>@Model.HomQua</td>
+            </tr>
+            <tr>
+                <td>Tuần này</td>
+                <td>@Model.TuanNay</td>
+            </tr>
+            <tr>
+                <td>Số người Online</td>
+                <td>@ViewBag.Visitors_online</td>
+            </tr>
+        </table>
+    </div>
+}
+
+@*<script>
+    const filterLinks = document.querySelectorAll('.filter-link');
+
+    filterLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            filterLinks.forEach(item => item.classList.remove('filter-link-active'));
+            this.classList.add('filter-link-active');
+
+            const prices = this.innerText.trim().split(' - ').map(price => parseFloat(price));
+            lowerPrice = parseFloat(prices[0]);
+            upperPrice = parseFloat(prices[1]);
+
+            $('.isotope-item').isotope({
+                filter: function () {
+                    const itemPriceElement = $(this).find('.in_product_price');
+                    const itemPriceText = itemPriceElement.text().replace(/\D/g, '');
+                    const itemPrice = parseFloat(itemPriceText) / 100;
+
+                    //console.log(itemPrice)
+                    //console.log(lowerPrice)
+                    if (!isNaN(itemPrice)) {
+                        return (itemPrice >= lowerPrice) && (itemPrice <= upperPrice);
+                    }
+
+                },
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+        });
+    });
+    
+  
+    // Hiển thị lại tất cả sản phẩm khi chọn tất cả
+    //$('.filter-link-all').click(function (e) {
+    //    e.preventDefault();
+    //    $('.isotope-item').show();
+    //});
+
+</script>
+<script src="~/Content/assets/js/categories_custom.js"></script>*@

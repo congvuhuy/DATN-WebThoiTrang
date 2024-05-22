@@ -109,7 +109,7 @@
                                     {
                                         strImge = img.Image;
                                     }
-                                    if (item.IsSale)
+                                    if (item.IsActive && item.IsSale)
                                     {
                                         <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
                                             <!-- Block2 -->
@@ -170,7 +170,7 @@
                                     {
                                         strImge = img.Image;
                                     }
-                                    if (item.IsFeature)
+                                    if (item.IsFeature && item.IsActive)
                                     {
                                         <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
                                             <!-- Block2 -->
@@ -238,7 +238,7 @@
                                     {
                                         strImge = img.Image;
                                     }
-                                    if (item.IsHot)
+                                    if (item.IsHot && item.IsActive)
                                     {
                                         <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
                                             <!-- Block2 -->

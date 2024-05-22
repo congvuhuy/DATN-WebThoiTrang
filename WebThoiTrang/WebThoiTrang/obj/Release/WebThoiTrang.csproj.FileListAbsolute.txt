@@ -76,10 +76,7 @@ D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.Owin.Security.MicrosoftAcc
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.Owin.Security.OAuth.xml
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.csproj.AssemblyReference.cache
-D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.Migrations.db01.resources
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.Migrations.db.resources
-D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.Migrations.db_update_order.resources
-D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.Migrations.db1.resources
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.csproj.GenerateResource.cache
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.csproj.CoreCompileInputs.cache
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.csproj.CopyComplete
@@ -117,3 +114,7 @@ D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\System.Web.WebPages.dll
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\System.Web.WebPages.Razor.dll
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\WebGrease.dll
 D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Microsoft.Owin.Security.Facebook.xml
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.Migrations.dbnew.resources
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Dapper.dll
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\bin\Dapper.xml
+D:\hk8\Coding\WebThoiTrang\WebThoiTrang\obj\Release\WebThoiTrang.Migrations.dbnew1.resources

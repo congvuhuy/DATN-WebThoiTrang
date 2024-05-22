@@ -10,10 +10,8 @@ using WebThoiTrang.Models.EF;
 
 namespace WebThoiTrang.Controllers
 {
-  
-
     public class ReviewController : Controller
-    { 
+    {
         private ApplicationDbContext _db = new ApplicationDbContext();
         // GET: Review
         public ActionResult Index()
@@ -30,7 +28,7 @@ namespace WebThoiTrang.Controllers
                 var userStore = new UserStore<ApplicationUser>(new ApplicationDbContext());
                 var userManager = new UserManager<ApplicationUser>(userStore);
                 var user = userManager.FindByName(User.Identity.Name);
-                if(user != null)
+                if (user != null)
                 {
                     item.UserName = user.UserName;
                     item.FullName = user.FullName;

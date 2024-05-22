@@ -221,10 +221,10 @@
 
     $('.btn-num-product-up').on('click', function(){
         var numProduct = Number($(this).prev().val());
-        $(this).prev().val(numProduct + 2);
+        $(this).prev().val(numProduct + 1);
     });
 
-    ==================================================================
+  /*  ==================================================================*/
     //[ Rating ]
     $('.wrap-rating').each(function(){
         var item = $(this).find('.item-rating');
