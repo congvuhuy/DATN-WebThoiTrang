@@ -17,10 +17,11 @@
         }
         function OnSuccessRE(res) {
             if (res.Success) {
+
                 $('#review_form')[0].reset();
             }
         }
-        function OnFailureRE() {
+        function OnFailureRE(res) {
             if (!res.Success) {
                 $('#review_form')[0].reset();
             }

@@ -1,7 +1,12 @@
 ﻿@model IEnumerable<WebThoiTrang.Models.ShoppingCartItem>
 
-
-
+@if (Model == null) { 
+    <form class="bg0 p-t-75 p-b-85">
+    <div class="container">
+        <h2>Không có sản phẩm nào trong giỏ hàng!!!</h2>
+    </div>
+</form>
+}
 @if (Model != null && Model.Any())
 {
     var tongtien = decimal.Zero;
@@ -41,10 +46,12 @@
                                         @*<input class="mtext-101 cl3 txt-center num-product" id="quantity_value" type="number" name="num-product" value="@item.Quantity">*@
 
                                         <input  class="mtext-101 cl3 txt-center num-product" id="quantity" type="number" name="num-product" value="@item.Quantity">
+                                        
                                         <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                                             <i class="fs-16 zmdi zmdi-plus"></i>
                                         </div>
                                     </div>
+                                    <input style="display:none" id="remainingQuantity" value="@item.RemainingQuantity" />
                                 </td>
                                 <td class="column-5 txt-center "> @WebThoiTrang.Common.Common.FormatNumber(item.TotalPrice, 0) đồng</td>
                                 <td class="column-6 txt-center ">

@@ -18,9 +18,15 @@
                     //$('#checkout_items').html(rs.Count);
                     //alert(rs.msg);
                     //alert(rs.Count)
-                    $('.checkout_items').attr('data-notify',rs.Count);
+                    $('.checkout_items').attr('data-notify', rs.Count);
                     swal("", rs.msg, "success");
+                    }
+                else  {
+                    //swal("", rs.msg, "error");
+                    swal("", rs.msg, "error");
                 }
+                    
+
             }
         });
     });
@@ -29,7 +35,34 @@
         //alert($('#quantity').val());
         var id = $(this).data("id");
         var quantity = $('#quantity').val();
-        Update(id, quantity);
+        var remainingQuantity = $('#remainingQuantity').val();
+        if (quantity < 1) {
+            e.preventDefault();
+            var id = $(this).data('id');
+            var conf = confirm('Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?');
+            if (conf == true) {
+                $.ajax({
+                    url: '/shoppingcart/Delete',
+                    type: 'POST',
+                    data: { id: id },
+                    success: function (rs) {
+                        if (rs.Success) {
+                            //$('#checkout_items').html(rs.Count);
+                            $('.checkout_items').attr('data-notify', rs.Count);
+                            $('#trow_' + id).remove();
+                            LoadCart();
+                        }
+                    }
+                });
+            }
+        }
+        if (quantity > remainingQuantity) {
+                    swal("", "Kho không đủ hàng vui lòng giảm số lượng sản phấm ", "error");
+
+        } else {
+            Update(id, quantity);
+        }
+        
 
     });
     $('body').on('click', '.btnDeleteAll', function (e) {

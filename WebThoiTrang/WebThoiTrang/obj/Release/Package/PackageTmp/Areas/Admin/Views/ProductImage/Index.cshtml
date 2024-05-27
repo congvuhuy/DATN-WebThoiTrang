@@ -1,9 +1,37 @@
 ﻿@model IEnumerable<WebThoiTrang.Models.EF.ProductImage>
 @{
     ViewBag.Title = "Ảnh sản phảm";
-    Layout = "~/Areas/Admin/Views/Shared/_LayoutEmpty.cshtml";
+    //Layout = "~/Areas/Admin/Views/Shared/_LayoutEmty.cshtml";
 
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/fontawesome-free/css/all.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/daterangepicker/daterangepicker.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/Content/clients/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- Bootstrap4 Duallistbox -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+    <!-- BS Stepper -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/bs-stepper/css/bs-stepper.min.css">
+    <!-- dropzonejs -->
+    <link rel="stylesheet" href="~/Content/clients/plugins/dropzone/min/dropzone.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Content/clients/dist/css/adminlte.min.css">
+    <script src="~/Content/clients/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/Content/clients/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Select2 -->
+    <script src="~/Content/clients/plugins/select2/js/select2.full.min.js"></script>
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/ckfinder/ckfinder.js"></script>
 }
 <style>
     .glImage {
@@ -44,28 +72,37 @@
             </div>
         </div>
         <div class="card-body">
-            <ul class="glImage">
-                @if (Model != null)
+            @if (Model != null)
+            {
+                var t = 0;
+                foreach (var item in Model)
                 {
-                    foreach (var item in Model)
+
+                    if (t % 3 == 0)
                     {
+                        @:<ul class="glImage">
+                        }
                         <li id="trow_@item.Id">
                             <img src="@item.Image" width="200" />
                             <div class="box-btn">
                                 <a href="#" data-id="@item.Id" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash"></i></a>
                                 @if (item.IsDefault)
                                 {
-                                    <a href="#" data-id="@item.Id" class="btn btn-sm btn-success btnDefault"><i class="fa fa-check"></i></a>
+                                    <a href="#" data-id="@item.Id" class="btn btn-sm btn-success isDefault"><i class="fa fa-check"></i></a>
                                 }
                                 else
                                 {
-                                    <a href="#" data-id="@item.Id" class="btn btn-sm btn-warning btnDefault">X</a>
+                                    <a href="#" data-id="@item.Id" class="btn btn-sm btn-warning "><i class="fa fa-times"></i></a>
                                 }
                             </div>
                         </li>
+                        if (t % 3 == 2)
+                        {
+                        @:</ul>
                     }
+                    t++;
                 }
-            </ul>
+            }
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
@@ -79,6 +116,39 @@
 <!-- /.content -->
 
 <script>
+    document.querySelectorAll('.box-btn a').forEach(function (button) {
+        button.addEventListener('click', function () {
+            var id = button.getAttribute('data-id');
+            var isDefault = button.classList.contains('btn-success'); // Kiểm tra xem nút hiện tại có phải là nút default không
+            var isNotDefault = button.classList.contains('btn-warning');
+            // Đảo ngược giá trị
+            // Update trạng thái IsDefault mới
+            document.querySelectorAll('.box-btn a').forEach(function (item) {
+
+                if (item.classList.contains('btn-success') && item != button) {
+                    item.classList.remove('btn-success');
+                    item.classList.add('btn-warning');
+                    item.innerHTML = '<i class="fa fa-times"></i>';
+                }
+            });
+
+            if (isNotDefault) {
+                button.classList.remove('btn-warning');
+                button.classList.add('btn-success');
+                button.innerHTML = '<i class="fa fa-check"></i>';
+                
+            }
+
+            // Cập nhật giá trị IsDefault của item
+            // Xử lý logic để cập nhật giá trị IsDefault của item với id tương ứng
+            $.ajax({
+                url: '/admin/ProductImage/IsDefault',
+                type: 'POST',
+                data: { id: id }
+            });
+            // Gửi request API hoặc thực hiện logic cập nhật dựa trên id và isDefault ở đây
+        });
+    });
     function BrowseServer(field) {
         var finder = new CKFinder();
         finder.selectActionFunction = function (fileUrl) {

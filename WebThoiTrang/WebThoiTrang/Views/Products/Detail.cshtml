@@ -64,6 +64,9 @@
                                 <div style="display:none;" class="in_product_price"> @Model.Price</div>
                             }
                         </span>
+                        <p>
+                            Lượt xem: @Model.ViewCount
+                        </p>
 
                         <p class="stext-102 cl3 p-t-23">
                             @Model.Description
@@ -185,7 +188,7 @@
 
     minusBtn.addEventListener('click', () => {
         let currentQty = parseInt(qtyInput.value);
-        if (currentQty > 0) {
+        if (currentQty > 1) {
             qtyInput.value = currentQty - 1;
         }
     });

@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\congv\Desktop\publish</_PublishTargetUrl>
-    <History>True|2024-05-22T14:25:44.9940211Z;</History>
+    <History>True|2024-05-25T07:44:23.2284010Z;True|2024-05-22T21:25:44.9940211+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Admin/Views/Account/Create.cshtml">
@@ -18,7 +18,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/18/2024 22:59:33</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Account/Login.cshtml">
-      <publishTime>04/17/2024 00:15:12</publishTime>
+      <publishTime>05/28/2024 00:09:46</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Category/Add.cshtml">
       <publishTime>03/27/2024 22:35:33</publishTime>
@@ -60,7 +60,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/28/2024 00:29:11</publishTime>
     </File>
     <File Include="Areas/Admin/Views/ProductImage/Index.cshtml">
-      <publishTime>03/28/2024 00:38:58</publishTime>
+      <publishTime>05/27/2024 15:18:18</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Products/Add.cshtml">
       <publishTime>03/28/2024 00:37:13</publishTime>
@@ -69,7 +69,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/01/2024 23:28:08</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Products/Index.cshtml">
-      <publishTime>05/21/2024 01:03:05</publishTime>
+      <publishTime>05/27/2024 00:30:14</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Role/Create.cshtml">
       <publishTime>04/15/2024 23:06:53</publishTime>
@@ -90,7 +90,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/15/2024 00:33:11</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_LayoutEmty.cshtml">
-      <publishTime>04/17/2024 00:16:13</publishTime>
+      <publishTime>05/26/2024 23:50:16</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_LayoutLogin.cshtml">
       <publishTime>04/16/2024 23:29:40</publishTime>
@@ -354,13 +354,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="bin/WebThoiTrang.dll">
-      <publishTime>05/22/2024 21:25:34</publishTime>
+      <publishTime>05/28/2024 00:11:12</publishTime>
     </File>
     <File Include="bin/WebThoiTrang.pdb">
-      <publishTime>05/22/2024 21:25:34</publishTime>
+      <publishTime>05/28/2024 00:11:12</publishTime>
     </File>
     <File Include="Content/assets/css/main.css">
       <publishTime>04/05/2024 09:58:40</publishTime>
+    </File>
+    <File Include="Content/assets/css/style.css">
+      <publishTime>05/27/2024 22:24:33</publishTime>
     </File>
     <File Include="Content/assets/css/util.css">
       <publishTime>04/05/2024 09:58:40</publishTime>
@@ -866,6 +869,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/assets/images/avatar-01.jpg">
       <publishTime>04/05/2024 09:58:40</publishTime>
     </File>
+    <File Include="Content/assets/images/b1.jpg">
+      <publishTime>03/18/2019 11:10:08</publishTime>
+    </File>
     <File Include="Content/assets/images/banner-01.jpg">
       <publishTime>04/05/2024 09:58:40</publishTime>
     </File>
@@ -1116,7 +1122,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/06/2024 23:14:49</publishTime>
     </File>
     <File Include="Content/assets/js/main.js">
-      <publishTime>05/21/2024 22:28:22</publishTime>
+      <publishTime>05/26/2024 09:13:35</publishTime>
     </File>
     <File Include="Content/assets/js/map-custom.js">
       <publishTime>04/05/2024 09:58:41</publishTime>
@@ -10743,7 +10749,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/22/2024 22:50:04</publishTime>
     </File>
     <File Include="Scripts/jsShopping.js">
-      <publishTime>04/14/2024 01:08:09</publishTime>
+      <publishTime>05/26/2024 09:16:58</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>03/26/2024 22:52:16</publishTime>
@@ -10814,8 +10820,32 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Uploads/images/polo14.jpg">
       <publishTime>04/11/2024 22:38:51</publishTime>
     </File>
+    <File Include="Uploads/images/polo20.jpg">
+      <publishTime>02/27/2024 18:49:28</publishTime>
+    </File>
+    <File Include="Uploads/images/polo21.jpg">
+      <publishTime>02/27/2024 18:49:28</publishTime>
+    </File>
     <File Include="Uploads/images/polo22.jpg">
       <publishTime>03/29/2024 01:02:33</publishTime>
+    </File>
+    <File Include="Uploads/images/polo23.jpg">
+      <publishTime>02/27/2024 18:49:28</publishTime>
+    </File>
+    <File Include="Uploads/images/polo24.jpg">
+      <publishTime>02/27/2024 18:49:28</publishTime>
+    </File>
+    <File Include="Uploads/images/polo30.jpg">
+      <publishTime>05/27/2024 23:33:49</publishTime>
+    </File>
+    <File Include="Uploads/images/polo31.jpg">
+      <publishTime>05/27/2024 23:33:49</publishTime>
+    </File>
+    <File Include="Uploads/images/polo32.jpg">
+      <publishTime>05/27/2024 23:33:49</publishTime>
+    </File>
+    <File Include="Uploads/images/polo33.jpg">
+      <publishTime>05/27/2024 23:33:49</publishTime>
     </File>
     <File Include="Uploads/images/somi10.jpg">
       <publishTime>03/28/2024 00:40:45</publishTime>
@@ -10835,8 +10865,146 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Uploads/images/somi14.jpg">
       <publishTime>03/28/2024 00:40:45</publishTime>
     </File>
+    <File Include="Uploads/images/somi20.jpg">
+      <publishTime>02/28/2024 03:08:14</publishTime>
+    </File>
+    <File Include="Uploads/images/somi21.jpg">
+      <publishTime>02/28/2024 03:08:14</publishTime>
+    </File>
+    <File Include="Uploads/images/somi22.jpg">
+      <publishTime>02/28/2024 03:08:14</publishTime>
+    </File>
+    <File Include="Uploads/images/somi23.jpg">
+      <publishTime>02/28/2024 03:08:14</publishTime>
+    </File>
+    <File Include="Uploads/images/somi24.jpg">
+      <publishTime>02/28/2024 03:08:14</publishTime>
+    </File>
+    <File Include="Uploads/images/somi30.jpg">
+      <publishTime>05/26/2024 23:03:42</publishTime>
+    </File>
+    <File Include="Uploads/images/somi31.jpg">
+      <publishTime>05/26/2024 23:03:42</publishTime>
+    </File>
+    <File Include="Uploads/images/somi32.jpg">
+      <publishTime>05/26/2024 23:03:42</publishTime>
+    </File>
+    <File Include="Uploads/images/somi33.jpg">
+      <publishTime>05/26/2024 23:03:42</publishTime>
+    </File>
+    <File Include="Uploads/images/somi34.jpg">
+      <publishTime>05/26/2024 23:03:42</publishTime>
+    </File>
+    <File Include="Uploads/images/somi40.jpg">
+      <publishTime>05/26/2024 23:09:21</publishTime>
+    </File>
+    <File Include="Uploads/images/somi41.jpg">
+      <publishTime>05/26/2024 23:09:22</publishTime>
+    </File>
+    <File Include="Uploads/images/somi42.jpg">
+      <publishTime>05/26/2024 23:09:23</publishTime>
+    </File>
+    <File Include="Uploads/images/somi43.jpg">
+      <publishTime>05/26/2024 23:09:24</publishTime>
+    </File>
+    <File Include="Uploads/images/somi44.jpg">
+      <publishTime>05/26/2024 23:09:24</publishTime>
+    </File>
+    <File Include="Uploads/images/somi50.jpg">
+      <publishTime>05/28/2024 00:03:23</publishTime>
+    </File>
+    <File Include="Uploads/images/somi51.jpg">
+      <publishTime>05/28/2024 00:03:23</publishTime>
+    </File>
+    <File Include="Uploads/images/somi52.jpg">
+      <publishTime>05/28/2024 00:03:23</publishTime>
+    </File>
+    <File Include="Uploads/images/somi53.jpg">
+      <publishTime>05/28/2024 00:03:23</publishTime>
+    </File>
+    <File Include="Uploads/images/somi60.jpg">
+      <publishTime>05/28/2024 00:04:56</publishTime>
+    </File>
+    <File Include="Uploads/images/somi61.jpg">
+      <publishTime>05/28/2024 00:04:56</publishTime>
+    </File>
+    <File Include="Uploads/images/somi62.jpg">
+      <publishTime>05/28/2024 00:04:56</publishTime>
+    </File>
+    <File Include="Uploads/images/somi63.jpg">
+      <publishTime>05/28/2024 00:04:56</publishTime>
+    </File>
     <File Include="Uploads/images/thun14.jpg">
       <publishTime>03/29/2024 00:59:50</publishTime>
+    </File>
+    <File Include="Uploads/images/thun20.jpg">
+      <publishTime>02/28/2024 03:01:46</publishTime>
+    </File>
+    <File Include="Uploads/images/thun21.jpg">
+      <publishTime>02/28/2024 03:01:46</publishTime>
+    </File>
+    <File Include="Uploads/images/thun22.jpg">
+      <publishTime>02/28/2024 03:01:46</publishTime>
+    </File>
+    <File Include="Uploads/images/thun23.jpg">
+      <publishTime>02/28/2024 03:01:46</publishTime>
+    </File>
+    <File Include="Uploads/images/thun24.jpg">
+      <publishTime>02/28/2024 03:01:46</publishTime>
+    </File>
+    <File Include="Uploads/images/thun30.jpg">
+      <publishTime>03/01/2024 18:52:42</publishTime>
+    </File>
+    <File Include="Uploads/images/thun31.jpg">
+      <publishTime>03/01/2024 18:52:42</publishTime>
+    </File>
+    <File Include="Uploads/images/thun32.jpg">
+      <publishTime>03/01/2024 18:52:42</publishTime>
+    </File>
+    <File Include="Uploads/images/thun33.jpg">
+      <publishTime>03/01/2024 18:52:42</publishTime>
+    </File>
+    <File Include="Uploads/images/thun40.jpg">
+      <publishTime>03/01/2024 19:01:06</publishTime>
+    </File>
+    <File Include="Uploads/images/thun41.jpg">
+      <publishTime>03/01/2024 19:01:06</publishTime>
+    </File>
+    <File Include="Uploads/images/thun42.jpg">
+      <publishTime>03/01/2024 19:01:06</publishTime>
+    </File>
+    <File Include="Uploads/images/thun43.jpg">
+      <publishTime>03/01/2024 19:01:06</publishTime>
+    </File>
+    <File Include="Uploads/images/thun50.jpg">
+      <publishTime>05/27/2024 23:39:17</publishTime>
+    </File>
+    <File Include="Uploads/images/thun51.jpg">
+      <publishTime>05/27/2024 23:39:17</publishTime>
+    </File>
+    <File Include="Uploads/images/thun52.jpg">
+      <publishTime>05/27/2024 23:39:17</publishTime>
+    </File>
+    <File Include="Uploads/images/thun53.jpg">
+      <publishTime>05/27/2024 23:39:17</publishTime>
+    </File>
+    <File Include="Uploads/images/thun60.jpg">
+      <publishTime>05/28/2024 00:06:59</publishTime>
+    </File>
+    <File Include="Uploads/images/thun61.jpg">
+      <publishTime>05/28/2024 00:06:59</publishTime>
+    </File>
+    <File Include="Uploads/images/thun62.jpg">
+      <publishTime>05/28/2024 00:06:59</publishTime>
+    </File>
+    <File Include="Uploads/images/thun63.jpg">
+      <publishTime>05/28/2024 00:06:59</publishTime>
+    </File>
+    <File Include="Uploads/images/thun70.jpg">
+      <publishTime>05/28/2024 00:08:08</publishTime>
+    </File>
+    <File Include="Uploads/images/thun71.jpg">
+      <publishTime>05/28/2024 00:08:08</publishTime>
     </File>
     <File Include="Uploads/_thumbs/Files/logo.png">
       <publishTime>04/20/2024 19:46:11</publishTime>
@@ -10944,13 +11112,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 22:52:17</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>05/13/2024 00:38:29</publishTime>
+      <publishTime>05/28/2024 00:09:22</publishTime>
     </File>
     <File Include="Views/Account/Profile.cshtml">
       <publishTime>04/20/2024 00:47:32</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>05/13/2024 00:36:01</publishTime>
+      <publishTime>05/27/2024 22:42:05</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>03/26/2024 22:52:17</publishTime>
@@ -10986,7 +11154,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/13/2024 01:05:12</publishTime>
     </File>
     <File Include="Views/Home/Refresh.cshtml">
-      <publishTime>05/22/2024 00:55:00</publishTime>
+      <publishTime>05/22/2024 21:35:56</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>03/26/2024 22:52:17</publishTime>
@@ -11008,6 +11176,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Views/Menu/ProductCategoryFooter.cshtml">
       <publishTime>05/13/2024 00:31:19</publishTime>
+    </File>
+    <File Include="Views/Menu/_MenuMobile.cshtml">
+      <publishTime>05/25/2024 00:36:49</publishTime>
     </File>
     <File Include="Views/Menu/_MenuOverView.cshtml">
       <publishTime>05/21/2024 01:01:34</publishTime>
@@ -11034,7 +11205,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/12/2024 23:52:56</publishTime>
     </File>
     <File Include="Views/Products/Detail.cshtml">
-      <publishTime>05/18/2024 02:04:25</publishTime>
+      <publishTime>05/26/2024 15:38:12</publishTime>
     </File>
     <File Include="Views/Products/Index.cshtml">
       <publishTime>05/22/2024 00:07:24</publishTime>
@@ -11052,7 +11223,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/18/2024 02:22:05</publishTime>
     </File>
     <File Include="Views/Review/_Review.cshtml">
-      <publishTime>05/18/2024 01:58:55</publishTime>
+      <publishTime>05/26/2024 15:49:55</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>03/26/2024 22:52:17</publishTime>
@@ -11061,7 +11232,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 22:52:17</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/19/2024 22:45:27</publishTime>
+      <publishTime>05/25/2024 00:43:44</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>03/26/2024 22:52:17</publishTime>
@@ -11079,7 +11250,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/22/2024 22:27:23</publishTime>
     </File>
     <File Include="Views/ShoppingCart/Partial_Item_Cart.cshtml">
-      <publishTime>05/13/2024 00:08:22</publishTime>
+      <publishTime>05/27/2024 16:01:06</publishTime>
     </File>
     <File Include="Views/ShoppingCart/Partial_Item_ThanhToan.cshtml">
       <publishTime>04/22/2024 22:24:10</publishTime>

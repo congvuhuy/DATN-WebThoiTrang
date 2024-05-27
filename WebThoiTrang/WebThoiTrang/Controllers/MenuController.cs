@@ -21,7 +21,11 @@ namespace WebThoiTrang.Controllers
             var items = db.Categories.OrderBy(x => x.Position).ToList();
             return PartialView("_MenuTop", items);
         }
-
+        public ActionResult MenuMobile()
+        {
+            var items = db.Categories.OrderBy(x => x.Position).ToList();
+            return PartialView("_MenuMobile", items);
+        }
         public ActionResult MenuProductCategory()
         {
             var items = db.ProductCategories.ToList();

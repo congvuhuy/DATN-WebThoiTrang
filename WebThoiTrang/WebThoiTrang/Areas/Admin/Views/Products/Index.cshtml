@@ -176,7 +176,7 @@
                 hide: "fade",
                 modal: true,
                 height: '600',
-                width: '700',
+                width: '700px',
                 resizable: true,
                 title: 'Quản lý ảnh sản phẩm',
                 close: function () {
@@ -185,7 +185,7 @@
             });
             $('body').on("click", ".imgproduct", function () {
                 var proid = $(this).attr("data-id");
-                $("#dialog #myIframe").attr("src", "/admin/ProductImage/Index?id=" + proid);
+                $("#dialog #myIframe").attr("src", "/Admin/ProductImage/Index?Id=" + proid);
                 $('#dialog').dialog('open');
                 return false;
             });

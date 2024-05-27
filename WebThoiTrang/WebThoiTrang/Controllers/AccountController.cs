@@ -82,7 +82,7 @@ namespace WebThoiTrang.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            return View();
+            return PartialView();
         }
 
         //
@@ -162,7 +162,7 @@ namespace WebThoiTrang.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            return PartialView();
         }
 
         //
@@ -174,7 +174,7 @@ namespace WebThoiTrang.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser {Email = model.Email };
+                var user = new ApplicationUser {Email = model.Email,UserName=model.UserName };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
